@@ -75,6 +75,7 @@ while True:
 
 
 all_questionnaires=[]
+#all acceptable data. NEED TO CHANGE if your data has non-integers.
 acceptable_scores = np.arange(100000).tolist()+['0','1','2','3','4','5','6','7','8','9','true','false','JT'] #if output is strings or ints for original data
 q_nums = 0
 zero_mat_cols=[1]# zero_mat index for non-online dataset
