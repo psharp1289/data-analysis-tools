@@ -23,8 +23,8 @@ import sys
 
 output_path='/Users/paulsharp/Documents/DATA_ANALYSIS_SCRIPTS'
 
-#DEFINE CONSTANTS HERE AND PUT THEM IN CAPS.
 
+# Get to the correct path
 print 'Have your data file open to consult for the following questions.\nThis program will extract the data correctly if you give the correct answers.\nThere are some fail-safes, but take your time and be meticulous!'
 
 while True:
@@ -39,7 +39,7 @@ while True:
 	else:
 		print '\nError! Only accepts y or n as answers.'
 
-#input CSV file and check if it exists. will only work if it exists.
+# Input CSV file and check if it exists. will only work if it exists.
 while True:
 	csv_file = raw_input('\nWhat CSV file would you like to extract questionnaire data from? \n')
 	if os.path.isfile(csv_file) == False:
@@ -47,9 +47,11 @@ while True:
 	else:
 		break
 
-#input type of data (online or not online) and check if input is correct
+# Generally there are two formats for raw data: One in which the columns are each question, and the data is the likert value 
+# OR each column is each possible answer to each question (E.g., q1-a, q1-b, q1-c, q1-d, q2-a, q2-b, etc.). 
+# IF it is the LATTER, answer "y" to this question
 while True:
-	type_data = raw_input('\nIs this data from an online questionnaire. Hint: if yes, there should be just 0''s and 1''s? (enter y/n):  \n')
+	type_data = raw_input('\n Does this dataset output each possible answer to each questionnaire? (enter y/n):  \n')
 	if type_data == 'y' or type_data == 'n':
 		break
 	else:
