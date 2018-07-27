@@ -1,18 +1,19 @@
-#	Created by Paul Sharp 7-8-2014. Updated 7-2-2015.
+#	Created by Paul Sharp 7-8-2014. Updated 7-27-2018.
 #
 #
 #	Extract as many questionnaires from a large dataset and score them with a few user inputs.
 # 	The option is given to score subscales, also.
 #
 #
-#	This script also finds invalid data and deletes those files from the new extraced
-#   and scored CSV file it creates (for the questionnaire of interest). It records
-#	these invalid subject IDs in a CSV file (intuitively saved) that has the subject
+#	This script also finds invalid data and deletes those subjects from the new extraced
+#       and scored CSV file it creates. 
+
+#       It records these invalid subject IDs in a CSV file (intuitively saved) that has the subject
 #	IDs, the location of the invalid data for that subject, the original data file and
-#   the questionnaire of interest.
+#       the questionnaire of interest.
+
 #
-#
-#
+
 import csv
 import numpy as np
 import pandas as pd
